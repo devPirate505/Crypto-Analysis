@@ -1,0 +1,112 @@
+# Project Configuration
+
+# Paths
+paths:
+  data_raw: "./data/raw"
+  data_processed: "./data/processed"
+  data_external: "./data/external"
+  models: "./models"
+  logs: "./logs"
+  
+# Data Configuration
+data:
+  # Cryptocurrency to track
+  symbols:
+    - "bitcoin"
+    - "ethereum"
+    - "binancecoin"
+  
+  # Timeframe in minutes (60 = 1 hour)
+  timeframe: 60
+  
+  # Days of historical data to fetch
+  history_days: 730
+  
+# Feature Engineering
+features:
+  # Rolling window sizes (in hours)
+  rolling_windows: [6, 12, 24, 48, 72]
+  
+  # Technical indicators
+  rsi_period: 14
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  ema_periods: [5, 10, 20, 50]
+  adx_period: 14
+  atr_period: 14
+  
+  # Lag features (number of periods)
+  lag_periods: [1, 2, 3, 6, 12]
+  
+  # Normalization
+  normalize_window: 720  # 30 days at 1h timeframe
+  
+# Model Configuration
+model:
+  # Target variable
+  target_type: "regression"  # or "regression"
+  prediction_horizon: 1  # hours ahead
+  
+  # LightGBM parameters
+  lightgbm:
+    n_estimators: 500
+    learning_rate: 0.05
+    max_depth: 7
+    num_leaves: 31
+    min_child_samples: 20
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    n_jobs: -1
+    
+  # RandomForest parameters
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+    min_samples_split: 10
+    min_samples_leaf: 5
+    random_state: 42
+    n_jobs: -1
+    
+  # Neural Network parameters (optional)
+  neural_net:
+    hidden_layers: [256, 128, 64]
+    dropout: 0.2
+    learning_rate: 0.001
+    batch_size: 32
+    epochs: 50
+    early_stopping_patience: 10
+    
+# Training Configuration
+training:
+  # Walk-forward validation
+  train_size_days: 180
+  validation_size_days: 30
+  test_size_days: 30
+  step_size_days: 30
+  
+  # Threshold for classification
+  classification_threshold: 0.0  # 0% return threshold
+  
+# Backtesting
+backtest:
+  initial_capital: 10000
+  commission: 0.001  # 0.1%
+  slippage: 0.0005   # 0.05%
+  
+  # Strategy parameters
+  probability_threshold: 0.55
+  stop_loss: 0.02    # 2%
+  take_profit: 0.04  # 4%
+  
+# Streamlit Dashboard
+dashboard:
+  refresh_interval: 300  # seconds
+  chart_height: 400
+  
+# API Configuration
+api:
+  coingecko:
+    base_url: "https://api.coingecko.com/api/v3"
+    rate_limit_delay: 1.5  # seconds between requests

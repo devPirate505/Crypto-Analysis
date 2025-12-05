@@ -1,0 +1,62 @@
+{
+  "bitcoin": {
+    "rows": 17495,
+    "columns": 88,
+    "mtf_features": [
+      "trend_4h",
+      "trend_strength_4h",
+      "price_position_4h",
+      "volatility_4h",
+      "rsi_4h",
+      "macd_trend_4h",
+      "volume_trend_4h",
+      "trend_1d",
+      "trend_strength_1d",
+      "price_position_1d",
+      "volatility_1d",
+      "rsi_1d",
+      "macd_trend_1d",
+      "volume_trend_1d"
+    ]
+  },
+  "ethereum": {
+    "rows": 17495,
+    "columns": 88,
+    "mtf_features": [
+      "trend_4h",
+      "trend_strength_4h",
+      "price_position_4h",
+      "volatility_4h",
+      "rsi_4h",
+      "macd_trend_4h",
+      "volume_trend_4h",
+      "trend_1d",
+      "trend_strength_1d",
+      "price_position_1d",
+      "volatility_1d",
+      "rsi_1d",
+      "macd_trend_1d",
+      "volume_trend_1d"
+    ]
+  },
+  "binancecoin": {
+    "rows": 17495,
+    "columns": 88,
+    "mtf_features": [
+      "trend_4h",
+      "trend_strength_4h",
+      "price_position_4h",
+      "volatility_4h",
+      "rsi_4h",
+      "macd_trend_4h",
+      "volume_trend_4h",
+      "trend_1d",
+      "trend_strength_1d",
+      "price_position_1d",
+      "volatility_1d",
+      "rsi_1d",
+      "macd_trend_1d",
+      "volume_trend_1d"
+    ]
+  }
+}

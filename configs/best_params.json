@@ -1,0 +1,35 @@
+{
+  "bitcoin": {
+    "n_estimators": 344,
+    "learning_rate": 0.09575193897908518,
+    "num_leaves": 64,
+    "max_depth": 4,
+    "min_child_samples": 67,
+    "subsample": 0.9194076366487923,
+    "colsample_bytree": 0.8466794066949523,
+    "reg_alpha": 0.01023736917357958,
+    "reg_lambda": 0.0004569152999621919
+  },
+  "ethereum": {
+    "n_estimators": 286,
+    "learning_rate": 0.01585434884055497,
+    "num_leaves": 122,
+    "max_depth": 6,
+    "min_child_samples": 21,
+    "subsample": 0.7632310551160901,
+    "colsample_bytree": 0.7989621467402739,
+    "reg_alpha": 4.036239081927984e-06,
+    "reg_lambda": 9.868622729753803
+  },
+  "binancecoin": {
+    "n_estimators": 354,
+    "learning_rate": 0.0961992755738786,
+    "num_leaves": 62,
+    "max_depth": 5,
+    "min_child_samples": 44,
+    "subsample": 0.5135865433094181,
+    "colsample_bytree": 0.7787233328313954,
+    "reg_alpha": 0.0927461061160307,
+    "reg_lambda": 0.03451595924912413
+  }
+}
