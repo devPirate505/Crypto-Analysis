@@ -20,7 +20,7 @@ data:
   timeframe: 60
   
   # Days of historical data to fetch
-  history_days: 730
+  history_days: 1460  # 4 years
   
 # Feature Engineering
 features:

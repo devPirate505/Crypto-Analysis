@@ -1,7 +1,7 @@
 {
   "coin_id": "ethereum",
   "total_features": 122,
-  "total_rows": 17495,
+  "total_rows": 35014,
   "raw_features": [
     "timestamp",
     "open",

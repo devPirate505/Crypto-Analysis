@@ -243,7 +243,8 @@ def main():
                 st.metric("24h Volume", f"${df.tail(24)['volume'].sum():,.0f}")
             
         # Price chart
-        st.plotly_chart(create_price_chart(df.tail(500), selected_coin), use_container_width=True)
+        # Price chart - show last 1 month
+        st.plotly_chart(create_price_chart(df.tail(720), selected_coin), use_container_width=True)
         
         # Recent data
         st.subheader("Recent Data")
@@ -259,7 +260,7 @@ def main():
         selected_indicator = st.selectbox("Select Indicator", available_indicators)
         
         if selected_indicator:
-            st.plotly_chart(create_indicator_chart(df.tail(500), selected_indicator, selected_coin), 
+            st.plotly_chart(create_indicator_chart(df.tail(720), selected_indicator, selected_coin), 
                           use_container_width=True)
             
         # Show multiple indicators
@@ -267,12 +268,12 @@ def main():
         
         with col1:
             if 'rsi_14' in df.columns:
-                st.plotly_chart(create_indicator_chart(df.tail(200), 'rsi_14', selected_coin), 
+                st.plotly_chart(create_indicator_chart(df.tail(300), 'rsi_14', selected_coin), 
                               use_container_width=True)
                 
         with col2:
             if 'macd' in df.columns:
-                st.plotly_chart(create_indicator_chart(df.tail(200), 'macd', selected_coin), 
+                st.plotly_chart(create_indicator_chart(df.tail(300), 'macd', selected_coin), 
                               use_container_width=True)
                 
     # Page: Model Predictions (Regression)

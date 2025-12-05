@@ -1,6 +1,6 @@
 {
   "bitcoin": {
-    "rows": 17495,
+    "rows": 35014,
     "columns": 88,
     "mtf_features": [
       "trend_4h",
@@ -20,7 +20,7 @@
     ]
   },
   "ethereum": {
-    "rows": 17495,
+    "rows": 35014,
     "columns": 88,
     "mtf_features": [
       "trend_4h",

@@ -38,10 +38,10 @@ def main():
     interval = '1h'  # Can be '1m', '5m', '15m', '1h', '4h', '1d'
     days = config['data'].get('history_days', 365)
     
-    # Override if too large (Binance can handle it, but start reasonable)
-    if days > 730:
-        logger.warning(f"Reducing history_days from {days} to 730 (2 years)")
-        days = 730
+    # Override if too large (Binance can handle up to ~1000 days per request, but we'll chunk if needed)
+    if days > 1460:
+        logger.warning(f"Reducing history_days from {days} to 1460 (4 years)")
+        days = 1460
     
     logger.info(f"Fetching data for {len(coin_ids)} coins: {coin_ids}")
     logger.info(f"Interval: {interval}, Days: {days}")
